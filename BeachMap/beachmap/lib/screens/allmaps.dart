@@ -53,8 +53,8 @@ class AllMaps extends StatelessWidget {
               backgroundColor: Colors.transparent,
               ),
               BottomNavigationBarItem(
-              icon: Icon(Icons.star),
-              label: 'Preferiti',
+              icon: Icon(Icons.share),
+              label: 'Condividi',
               backgroundColor: Colors.transparent,
               ),
           ]
