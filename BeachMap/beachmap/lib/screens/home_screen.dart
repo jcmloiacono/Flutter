@@ -1,3 +1,4 @@
+import 'package:beachmap/screens/allmaps.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -10,7 +11,7 @@ class HomeScreen extends StatelessWidget {
         Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/sfondo.jpg"),
+              image: AssetImage("assets/img/sfondo.jpg"),
               fit: BoxFit.cover
             ),
           ),
@@ -20,16 +21,34 @@ class HomeScreen extends StatelessWidget {
           appBar: AppBar(
             title: Text(""),
             elevation: 0,
+            actions: [
+              IconButton(
+              icon: Icon(Icons.search_outlined),
+              onPressed:(){},
+              ),
+            ],
           ),
 
-          floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.play_circle_filled),
-            onPressed: (){},),
+          floatingActionButton: FloatingActionButton.extended(
+            backgroundColor: Colors.amber[700],
+            elevation: 10,
+            icon: Icon(
+              Icons.play_circle_filled,
+              color:Colors.white,
+              size: 40.0,
+              ),
+            label: Text("INIZIA"),
+            onPressed: (){
+              _navigateToNextScreen(context);
+            
+            },
+            ),
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
           body: Container(
             child: Center(
               child: Image(
-                image: AssetImage("assets/logo.png"),
+                image: AssetImage("assets/img/logo.png"),
                 width: 350.0,
                 ), 
             )
@@ -37,6 +56,10 @@ class HomeScreen extends StatelessWidget {
         ),
       ],
     ); 
+  }
+
+  void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => AllMaps()));
   }
 }
 

@@ -1,7 +1,10 @@
 
-import 'package:beachmap/screens/all_screens.dart';
 import 'package:flutter/material.dart';
  
+import 'package:beachmap/screens/all_screens.dart';
+
+
+
 void main() => runApp(MyApp());
  
 class MyApp extends StatelessWidget {
@@ -13,14 +16,15 @@ class MyApp extends StatelessWidget {
       initialRoute: 'home',
       routes: {
         'home': ( _ ) => HomeScreen(),
-        'details': ( _ ) => DetailScreen()
+        //TODO ALL MAPS 'details': ( _ ) => DetailScreen()
       },
       //My styles for App
       theme: ThemeData.light().copyWith(
         appBarTheme: AppBarTheme(
           color: Colors.transparent,
         ),
-        scaffoldBackgroundColor: Colors.transparent // Background the Scaffold
+         scaffoldBackgroundColor: Colors.transparent // Background the Scaffold
+         
       ), 
 
     );
