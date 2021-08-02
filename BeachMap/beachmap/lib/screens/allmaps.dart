@@ -35,7 +35,9 @@ class AllMaps extends StatelessWidget {
           body: CardMaps(),
         
         bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
           items: <BottomNavigationBarItem>[
+            
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               label: 'Home',
@@ -47,12 +49,14 @@ class AllMaps extends StatelessWidget {
               label: 'Preferiti',
               backgroundColor: Colors.transparent,
               ),
-              BottomNavigationBarItem(
+
+            BottomNavigationBarItem(
               icon: Icon(Icons.search),
               label: 'Cerca',
               backgroundColor: Colors.transparent,
               ),
-              BottomNavigationBarItem(
+              
+            BottomNavigationBarItem(
               icon: Icon(Icons.share),
               label: 'Condividi',
               backgroundColor: Colors.transparent,

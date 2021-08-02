@@ -1,3 +1,4 @@
+import 'package:beachmap/screens/all_screens.dart';
 import 'package:flutter/material.dart';
 
 class CardMaps extends StatelessWidget {
@@ -22,7 +23,7 @@ class CardMaps extends StatelessWidget {
               
               Container(
                 margin: EdgeInsets.only(bottom: 50.0),
-                child: Text("Dove vuoi andare", 
+                child: Text("Dove vuoi andare?", 
                   style: TextStyle(
                     fontSize: 40.0,
                     color: Colors.amber,
@@ -46,7 +47,9 @@ class CardMaps extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(2.0),
                         child: InkWell(
-                          onTap: tmpFunction,
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => NordOvest()));
+                          }, // onTap
                           child: Image(
                             image: AssetImage("assets/img/nord-ovest.jpg"),
                           ),
@@ -61,8 +64,13 @@ class CardMaps extends StatelessWidget {
 
                       child: Padding(
                         padding: const EdgeInsets.all(2.0),
-                        child: Image(
-                          image: AssetImage("assets/img/nord-est.jpg"),
+                        child: InkWell(
+                          onTap: (){ 
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => NordEst()));
+                          }, // onTap
+                          child: Image(
+                            image: AssetImage("assets/img/nord-est.jpg"),
+                          ),
                         ),
                       ),
                     ),
@@ -77,9 +85,14 @@ class CardMaps extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: Image(
-                          image: AssetImage("assets/img/sud-ovest.jpg")
-                          ),
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => SudOvest()));
+                          },
+                          child: Image(
+                            image: AssetImage("assets/img/sud-ovest.jpg")
+                            ),
+                        ),
                       ),
                     ),
                     ),
@@ -88,8 +101,13 @@ class CardMaps extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Padding(
                         padding: const EdgeInsets.all(3.0),
-                        child: Image(
-                        image: AssetImage("assets/img/sud-est.jpg")
+                        child: InkWell(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => SudEst()));
+                          },
+                          child: Image(
+                          image: AssetImage("assets/img/sud-est.jpg")
+                          ),
                         ),
                       ),
                     ),
@@ -102,7 +120,9 @@ class CardMaps extends StatelessWidget {
     
     
   } 
+  
   void tmpFunction() {
+    
     print('Function Called');
   }
 }
