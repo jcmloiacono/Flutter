@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           color: Colors.transparent,
         ),
-         scaffoldBackgroundColor: Colors.transparent // Background the Scaffold
-         
+        scaffoldBackgroundColor: Colors.transparent, // Background the Scaffold
+        
       ), 
+      
 
     );
   

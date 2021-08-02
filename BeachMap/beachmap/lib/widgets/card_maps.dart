@@ -19,7 +19,6 @@ class CardMaps extends StatelessWidget {
                   ),
               ),
           
-
               
               Container(
                 margin: EdgeInsets.only(bottom: 50.0),
