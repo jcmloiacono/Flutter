@@ -12,9 +12,7 @@ class AllMaps extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage("assets/img/sfondo.jpg"),
-              fit: BoxFit.cover ),
+            color: Colors.cyan[900],
           ),
         ),
       

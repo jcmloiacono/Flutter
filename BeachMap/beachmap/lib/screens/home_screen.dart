@@ -10,12 +10,13 @@ class HomeScreen extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-            image: DecorationImage(
+            color: Colors.cyan[900]
+            /* image: DecorationImage(
               image: AssetImage("assets/img/sfondo.jpg"),
-              fit: BoxFit.cover
+              fit: BoxFit.cover/*  */ */
             ),
           ),
-        ),
+        
     
         Scaffold(
           appBar: AppBar(
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
               color:Colors.white,
               size: 40.0,
               ),
-            label: Text("INIZIA"),
+            label: Text("SCOPRI"),
             onPressed: (){
               _navigateToNextScreen(context);
             
@@ -46,11 +47,14 @@ class HomeScreen extends StatelessWidget {
             floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
           body: Container(
-            child: Center(
-              child: Image(
-                image: AssetImage("assets/img/logo.png"),
-                width: 350.0,
-                ), 
+            child: Padding(
+              padding: const EdgeInsets.only(bottom:200.0),
+              child: Center(
+                child: Image(
+                  image: AssetImage("assets/img/logo.png"),
+                  width: 350.0,
+                  ),
+              ),
             )
           ),
         ),

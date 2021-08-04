@@ -14,7 +14,7 @@ class CardMaps extends StatelessWidget {
                 margin: EdgeInsets.only(top: 10.0, bottom: 60.0),
                 child: Image(
                   image: AssetImage("assets/img/logo.png"),
-                  width: 250.0,
+                  width: 180.0,
                   
                   ),
               ),
@@ -22,10 +22,10 @@ class CardMaps extends StatelessWidget {
               
               Container(
                 margin: EdgeInsets.only(bottom: 50.0),
-                child: Text("Dove vuoi andare?", 
+                child: Text("DOVE VUOI ANDARE?", 
                   style: TextStyle(
-                    fontSize: 40.0,
-                    color: Colors.amber,
+                    fontSize: 30.0,
+                    color: Colors.white,
                     shadows: <Shadow>[
                       Shadow(
                         offset: Offset(2.0,2.0),

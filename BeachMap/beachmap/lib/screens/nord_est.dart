@@ -10,19 +10,25 @@ class NordEst extends StatelessWidget {
     return Stack(
       children: [ Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/img/sfondo.jpg"),
-            fit: BoxFit.cover ),
+          color: Colors.cyan[900]
         ),
       ),
 
       Scaffold(
         appBar: AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image(image: AssetImage("assets/img/logo.png"),
+              width: 130.0,
+              ),
+            ],
+            ),
           centerTitle: true,
-          elevation: 0,
+          elevation: 10,
           actions: [
             IconButton(
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.menu_open),
               onPressed: (){}), 
           ],),
 
@@ -32,10 +38,10 @@ class NordEst extends StatelessWidget {
 
               margin: EdgeInsets.only(bottom: 50.0,  top: 50.0),
               child: Center(
-                child: Text("Nord Est", 
+                child: Text("NORD / EST", 
                 style: TextStyle(
                   fontSize: 40.0,
-                  color: Colors.amber,
+                  color: Colors.white,
                   shadows: <Shadow>[
                     Shadow(
                       offset: Offset(2.0, 2.0),
@@ -46,17 +52,45 @@ class NordEst extends StatelessWidget {
                 ),
               ),
             ),
+
+            Container(
+              width: double.infinity,
+              height: size.height * 0.5,
+              color: Colors.red,
+              child: Center(child: Text("MAPA")),
+            )
           ],
         ),
 
-
-
-
-
-
+        bottomNavigationBar: BottomNavigationBar(
+          showSelectedLabels: false,
+          items: <BottomNavigationBarItem>[
+                        
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Home",
+              backgroundColor: Colors.transparent
+              ),
+            
+            BottomNavigationBarItem(
+              icon: Icon(Icons.star),
+              label: "Preferiti",
+              backgroundColor: Colors.transparent
+              ),
+            
+            BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: "Cerca",
+              backgroundColor: Colors.transparent
+              ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.share),
+              label: "Condividi",
+              backgroundColor: Colors.transparent
+              ),
+          ],),
 
       )
-
       ],
     );
   }

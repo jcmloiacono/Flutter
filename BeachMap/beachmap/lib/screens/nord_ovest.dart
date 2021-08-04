@@ -10,45 +10,55 @@ class NordOvest extends StatelessWidget {
     return Stack(
       children:[ Container(
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/img/sfondo.jpg"),    
-            fit: BoxFit.cover),
+          color: Colors.cyan[900],
         ),
       ),
 
       Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          elevation: 0,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: (){}, 
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+            Image(image: AssetImage("assets/img/logo.png"),
+            width: 130.0,)
+          ],
+          ),
+          elevation: 10,
+          actions: [
+            IconButton(
+              icon: Icon(Icons.menu_open),
+              onPressed: (){}, 
             ),
+          
         ],
         
         ),
 
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              
-              margin: EdgeInsets.only(bottom: 50.0, top: 50.0),
-              child: Center(
-                child: Text("Nord Ovest", 
-                  style: TextStyle(
-                  fontSize:40.0,
-                  color: Colors.amber,
-                  shadows: <Shadow>[
-                    Shadow(
-                      offset: Offset(2.0, 2.0),
-                      blurRadius: 3.0
-                    )
-                  ]
+            Column(
+              children: [
+
+        
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 50.0),
+                  child: Text("NORD / OVEST", 
+                    style: TextStyle(
+                      fontSize:40.0,
+                      color: Colors.white,
+                      shadows: <Shadow>[
+                        Shadow(
+                          offset: Offset(2.0, 2.0),
+                          blurRadius: 3.0
+                      )
+                    ]
+                    ),
                   ),
                 ),
-              )
-              ),
+              ],
+            ),
+
             Container(
               
               width: double.infinity,
